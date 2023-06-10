@@ -1,0 +1,26 @@
+{
+  "name": "peerlocal-sg",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ peerlocal-sepolia",
+    "create-local": "graph create --node http://localhost:8020/ peerlocal-sepolia",
+    "remove-local": "graph remove --node http://localhost:8020/ peerlocal-sepolia",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 peerlocal-sepolia",
+    "test": "graph test",
+    "build:goerli": "graph build --network goerli",
+    "build:sepolia": "graph build --network sepolia",
+    "build:optimism-goerli": "graph build --network optimism-goerli",
+    "build:gnosis_chiado": "graph build --network gnosis_chiado",
+    "deploy:goerli": "pnpm build:goerli && graph deploy --network goerli --product hosted-service grmkris/peerlocal-goerli",
+    "deploy:sepolia": "pnpm build:sepolia && graph deploy --network sepolia --product hosted-service grmkris/peerlocal-sepolia",
+    "deploy:optimism-goerli": "pnpm build:optimism-goerli && graph deploy --network optimism-goerli --product hosted-service grmkris/peerlocal-optimism-goerli"
+
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.51.0",
+    "@graphprotocol/graph-ts": "^0.31.0"
+  },
+  "devDependencies": { "matchstick-as": "0.5.0" }
+}

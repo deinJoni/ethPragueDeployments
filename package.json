@@ -1,0 +1,21 @@
+{
+  "name": "t3-app-clerk-minimal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:peerlocal": "pnpm run --filter peerlocal build",
+    "dev:peerlocal": "pnpm run --filter peerlocal dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@preconstruct/cli": "^2.7.0",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "@babel/preset-typescript": "^7.21.5"
+  }
+}

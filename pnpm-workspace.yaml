@@ -1,0 +1,6 @@
+packages:
+  - "peerlocal"
+  - "eth"
+  - "sg"
+  - "peerlocal-sg"
+  - "sg-client"

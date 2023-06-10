@@ -1,0 +1,40 @@
+query Communities {
+    communities {
+        id
+        owner
+        ipfsMetadata
+        transactionHash
+        communityId
+        stakingRequirement
+        blockTimestamp
+        ipfsMetadata
+    }
+}
+
+query Community($communityId: ID!) {
+    community(id: $communityId) {
+        id
+        ipfsMetadata
+        owner
+        stakingRequirement
+        communityId
+        members {
+            transactionHash
+            blockNumber
+            id
+        }
+        offers {
+            id
+            blockNumber
+            metadata
+            stakingRequirement
+            offerStatus
+            reputationRequirement
+            blockNumber
+            blockTimestamp
+        }
+        blockTimestamp
+        blockNumber
+        transactionHash
+    }
+}
